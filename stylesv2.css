@@ -167,6 +167,14 @@ a:hover {
   background-color: var(--secondary-bg);
 }
 
+.nav-links .btn-primary {
+  color: white;
+}
+
+.nav-links .btn-primary:hover {
+  color: white;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
