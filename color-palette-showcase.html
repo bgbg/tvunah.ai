@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tvunah.ai - Color Palette Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Showcase-specific styles */
+    .showcase {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    /* Color Swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .color-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: var(--primary-bg);
+    }
+
+    .color-swatch {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .color-info {
+      padding: 1rem;
+      background: var(--primary-bg);
+    }
+
+    .color-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .color-hex {
+      color: var(--text-secondary);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Buttons Demo */
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn-accent {
+      background: var(--accent-secondary);
+      color: white;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-secondary-hover);
+    }
+
+    /* Typography Demo */
+    .type-demo {
+      background: var(--accent-light);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+    }
+
+    .type-demo h3 {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .type-demo p {
+      color: var(--text-secondary);
+      line-height: var(--line-height-base);
+      margin-bottom: 1rem;
+    }
+
+    .type-demo a {
+      color: var(--accent-primary);
+    }
+
+    .type-demo a:hover {
+      color: var(--accent-primary-hover);
+    }
+
+    /* Cards Demo */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .demo-card {
+      background: var(--primary-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: var(--transition-base);
+    }
+
+    .demo-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-secondary);
+    }
+
+    .demo-card .card-icon {
+      background: var(--accent-light);
+      color: var(--accent-primary);
+    }
+
+    .card-coral-accent {
+      border-left: 4px solid var(--accent-coral);
+    }
+
+    .card-coral-accent .card-icon {
+      background: #FFF0ED;
+      color: var(--accent-coral);
+    }
+
+    .card-cyan-accent .card-icon {
+      background: #E0F7FA;
+      color: var(--accent-secondary);
+    }
+
+    /* Gradient Demo */
+    .gradient-box {
+      height: 150px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gradient-1 {
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    }
+
+    .gradient-2 {
+      background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-coral-hover) 100%);
+    }
+
+    .gradient-3 {
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="showcase">
+    <div class="logo" style="margin-bottom: 1rem;">
+      <img src="figures/LogoTWithText.svg" alt="tvunah.ai logo" style="width: 200px; height: auto;">
+    </div>
+    <h1>Color Palette</h1>
+    <p class="subtitle">Logo-based blue scheme with complementary coral accent</p>
+
+    <!-- Logo Variants Demo -->
+    <div class="section">
+      <h2>Logo Variants</h2>
+      <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem;">
+        <div style="text-align: center;">
+          <img src="figures/LogoTWithText.svg" alt="tvunah.ai logo with text" style="width: 200px; height: auto; margin-bottom: 0.5rem;">
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Logo with Text</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="figures/LogoT.svg" alt="tvunah.ai logo icon" style="width: 80px; height: 80px; margin-bottom: 0.5rem;">
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Logo Icon Only</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Colors -->
+    <div class="section">
+      <h2>Primary Colors</h2>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--text-primary); color: white;">
+            Dark Navy
+          </div>
+          <div class="color-info">
+            <div class="color-name">Primary Text / Logo Dark</div>
+            <div class="color-hex">var(--text-primary)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--accent-primary); color: white;">
+            Logo Blue
+          </div>
+          <div class="color-info">
+            <div class="color-name">Primary Accent / Logo Main</div>
+            <div class="color-hex">var(--accent-primary)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--accent-secondary); color: white;">
+            Cyan
+          </div>
+          <div class="color-info">
+            <div class="color-name">Secondary Accent / .ai Color</div>
+            <div class="color-hex">var(--accent-secondary)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--accent-coral); color: white;">
+            Coral
+          </div>
+          <div class="color-info">
+            <div class="color-name">Complementary Accent</div>
+            <div class="color-hex">var(--accent-coral)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporting Colors -->
+    <div class="section">
+      <h2>Supporting Colors</h2>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--text-secondary); color: white;">
+            Blue Gray
+          </div>
+          <div class="color-info">
+            <div class="color-name">Secondary Text</div>
+            <div class="color-hex">var(--text-secondary)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--secondary-bg); color: var(--text-primary);">
+            Light Blue
+          </div>
+          <div class="color-info">
+            <div class="color-name">Alternative Background</div>
+            <div class="color-hex">var(--secondary-bg)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--accent-light); color: var(--accent-primary);">
+            Pale Blue
+          </div>
+          <div class="color-info">
+            <div class="color-name">Highlight Background</div>
+            <div class="color-hex">var(--accent-light)</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: var(--border-color); color: var(--text-primary);">
+            Border Blue
+          </div>
+          <div class="color-info">
+            <div class="color-name">Border Color</div>
+            <div class="color-hex">var(--border-color)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gradients -->
+    <div class="section">
+      <h2>Gradients</h2>
+      <div class="gradient-box gradient-1">
+        Logo Gradient: Blue to Cyan
+      </div>
+      <div class="gradient-box gradient-2">
+        Coral Gradient: Warm Accent
+      </div>
+      <div class="gradient-box gradient-3">
+        Full Spectrum: Navy to Cyan
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="section">
+      <h2>Button Styles</h2>
+      <div class="button-group">
+        <button class="btn btn-primary">Coral Primary Button</button>
+        <button class="btn btn-secondary">Blue Secondary Button</button>
+        <button class="btn btn-accent">Cyan Accent Button</button>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="section">
+      <h2>Typography</h2>
+      <div class="type-demo">
+        <h3>This is a heading in dark navy (#0D3A5F)</h3>
+        <p>Body text appears in blue-gray (#5A7A8C) for better readability while maintaining the professional look. <a href="#">Links use the primary blue (#0F4C81)</a> from your logo.</p>
+        <p>The complementary coral color (#FF6B4A) is perfect for call-to-action buttons and important highlights that need to stand out.</p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="section">
+      <h2>Card Components</h2>
+      <div class="cards-grid">
+        <div class="demo-card">
+          <div class="card-icon">📊</div>
+          <h3>Standard Card</h3>
+          <p>Uses logo blues with subtle hover effects</p>
+        </div>
+
+        <div class="demo-card card-coral-accent">
+          <div class="card-icon">🎯</div>
+          <h3>Accent Card</h3>
+          <p>Features coral accent for emphasis</p>
+        </div>
+
+        <div class="demo-card card-cyan-accent">
+          <div class="card-icon">✨</div>
+          <h3>Cyan Highlight</h3>
+          <p>Uses the .ai cyan for special features</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Combinations -->
+    <div class="section">
+      <h2>Recommended Color Combinations</h2>
+      <div class="type-demo">
+        <h3>Primary: Blue (var(--accent-primary)) + Coral (var(--accent-coral))</h3>
+        <p>Perfect for high-contrast CTAs and important actions</p>
+
+        <h3 style="margin-top: 1.5rem;">Secondary: Navy (var(--text-primary)) + Cyan (var(--accent-secondary))</h3>
+        <p>Great for headers, navigation, and informational elements</p>
+
+        <h3 style="margin-top: 1.5rem;">Subtle: Light Blue (var(--secondary-bg)) + Blue Gray (var(--text-secondary))</h3>
+        <p>Ideal for backgrounds and secondary content areas</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
